@@ -1,18 +1,37 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Layout from '../Layout'
+import Main from '../views/Main'
+
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
     component: Layout,
-    redirect: '/axis',
+    redirect: '/Main',
     children: [{
-      path: '/axis',
-      component: () => import('@/views/Main/axis.vue')
+      path: '/Main',
+      component: Main
+    }, {
+      path: '/Travel',
+      component: () => import('@/views/Travel/index.vue'),
+      redirect: '/Travel/cityCard',
+      children: [{
+        path: 'cityCard',
+        component: () => import('@/views/Travel/cityCard.vue')
+      }, {
+        path: 'cityTravel',
+        component: () => import('@/views/Travel/cityTravel.vue')
+      }]
+    }, {
+      path: '/Community',
+      component: () => import('@/views/Share/index.vue')
+    }, {
+      path: '/Statement',
+      component: () => import('@/views/Statement/index.vue')
     }]
   }
 ]
