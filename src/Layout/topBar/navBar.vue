@@ -15,7 +15,7 @@
                 <router-link to="/" tag="li"><span>首页</span></router-link>
                 <router-link to="/Travel" tag="li"><span>旅行</span></router-link>
                 <router-link to="/Community" tag="li"><span>社区</span></router-link>
-                <router-link to="/Statement" tag="li"><span>声明</span></router-link>
+                <router-link to="/Statement" tag="li"><span>说明</span></router-link>
             </ul>
         </div>
         <div class="login-box">
