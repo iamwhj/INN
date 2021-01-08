@@ -13,6 +13,10 @@
                     <li> <el-link type="primary" target="_blank" href="https://www.aigei.com/design/pic">爱给网</el-link> </li>
                     <li> <el-link type="danger"  target="_blank" href="https://pixabay.com/?from=xiaomark.com">Pixabay</el-link> </li>
                 </ul>
+                <h3>额外推荐：</h3>
+                <ul>
+                    <li> <el-link type="success" target="_blank" href="https://uigradients.com/#MoonlitAsteroid">Uigradients(渐变色)</el-link> </li>
+                </ul>
             </div>
         </div>
         <div class="divide">
@@ -95,6 +99,7 @@ export default {
                     line-height: 26px;
                     text-indent: 2em;
                     color: #666;
+                    z-index: 11;
                 }
             }
             .img-box{
