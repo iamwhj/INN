@@ -177,7 +177,6 @@ export default {
         .login-box {
             position: absolute;
             right: 4%;
-            height: 100%;
             line-height: 40px;
             i {
                 font-size: 18px;

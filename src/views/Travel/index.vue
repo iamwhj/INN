@@ -28,10 +28,14 @@ export default {
   .travel-box {
     overflow: hidden;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     .travel-content {
-      float: right;
+      // float: right;
       width: 80%;
-      height: 1200px;
+      min-width: 1000px;
+      min-height: 1200px;
       background: #fff;
     }
   }

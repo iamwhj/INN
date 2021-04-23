@@ -63,6 +63,7 @@ export default {
 .city-nav {
   display: inline-block;
   width: 18%;
+  min-width: 220px;
   height: 1000px;
   background: #fff;
   .city-box {

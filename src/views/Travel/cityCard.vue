@@ -90,12 +90,12 @@ export default {
     dl {
       display: flex;
       flex-flow: row wrap;
-      justify-self: space-between;
       dd {
         flex: 1 2 30%;
         max-width: 30%;
         min-width: 300px;
         margin-bottom: 30px;
+        margin-left: 20px;
         .el-card {
           .el-card__body {
             padding: 10px;

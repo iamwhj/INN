@@ -71,7 +71,7 @@
     <div class="flutter">
       <div class="flutter-box">
         <span>世界辣么大，我也想去看看</span>
-        <router-link to="/" class="pan-btn tiffany-btn">GO AGAIN</router-link>
+        <router-link to="/Travel/cityCard" class="pan-btn tiffany-btn">GO AGAIN</router-link>
       </div>
     </div>
   </div>
@@ -135,12 +135,12 @@ export default {};
       #left1 {
         background: url("../../assets/img/thumb (1s).jpg");
         background-position: center center;
-        animation: leftAction 2.5s ease;
+        // animation: leftAction 2.5s ease;
       }
       #left2 {
         background: url("../../assets/img/thumb (4s).jpg");
         background-position: center center;
-        animation: leftAction 2.5s ease;
+        // animation: leftAction 2.5s ease;
       }
     }
     .right {
@@ -151,7 +151,7 @@ export default {};
         transform: translateX(-235px);
         height: 100%;
         .right1 {
-          animation: right1Action 2.5s ease;
+          // animation: right1Action 2.5s ease;
           @keyframes right1Action {
             0% {
               opacity: 0;
@@ -167,10 +167,10 @@ export default {};
           }
         }
         .right2 {
+          // animation: right2Action 2.5s ease;
           width: 100%;
           height: 49%;
           transform: translateX(-200px);
-          animation: right2Action 2.5s ease;
           @keyframes right2Action {
             0% {
               opacity: 0;

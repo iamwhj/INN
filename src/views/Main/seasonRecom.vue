@@ -2,13 +2,13 @@
   <div class="seasonRecom">
     <div class="topBar">
       <span>春季</span>
-      <span>万物伊始，春暖花开，郁郁葱葱！</span>
+      <span>朝往暮息，春去春又来。春来万物生，遍野百花放！---熬过严寒迎来的便是成长。</span>
     </div>
     <div class="recomList">
       <ul>
         <li>
           <div class="img-box">
-            <img src="../../assets/img/thumb (8).jpg" />
+            <img src="../../assets/img/-1c00e8bf3da3c390.jpg" />
             <div class="buttom-box">
               <span>
                 <i class="el-icon-time"></i>
@@ -28,14 +28,27 @@
             </div>
           </div>
           <div class="describe-box">
-            <span>清水码头</span>
+            <span>花开满枝-济南</span>
             <p>
-              春季，是四季中的第一个季节，指立春至立夏期间，含节气有立春、雨水、惊蛰、春分、清明、谷雨。是万物复苏的季节。
-              春季，是四季中的第一个季节，指立春至立夏期间，含节气有立春、雨水、惊蛰、春分、清明、谷雨。是万物复苏的季节。
-              春季，是四季中的第一个季节，指立春至立夏期间，含节气有立春、雨水、惊蛰、春分、清明、谷雨。是万物复苏的季节。
-              春季，是四季中的第一个季节，指立春至立夏期间，含节气有立春、雨水、惊蛰、春分、清明、谷雨。是万物复苏的季节。
-              春季，是四季中的第一个季节，指立春至立夏期间，含节气有立春、雨水、惊蛰、春分、清明、谷雨。是万物复苏的季节。
+              济南春天其实给我最大的感觉就是没有春天，但是呢我又沉醉于其中！约上三五个朋友，去南部山区挖挖荠菜，看看桃花，然后再逛逛景点，其中感觉真的不错！
+              现在的春天我更感觉像一个委婉的小女子，一笑一颦。看着你不说话，让你乐在其中！还记得吗？
+              春天到了，带上孩子去哪里玩？对！去黑虎泉！潺潺泉水，柳叶飘飘，一杯大碗茶，一口泉水，喝的是甘甜，品的是人生！<br />
+
+              济南的春天能明显感受到勃勃的生机，冬天的时候一眼望去绿植基本上都是光秃秃的，严冬来临前它们就会把叶子都给褪去，减少不必要的能量消耗，其实这也是为春天做准备。
+              春天一到便会满园花香，说来也是奇怪，许多的树都是先开花后长叶，光秃秃的枝丫上开满鲜花， 看到得多了身为南方人的我也是见怪不怪了。<br />
+
+              既然说到植物，那咱也来提一提动物了，最常见便是麻雀了，基本都是两三只结伴觅食，夏天的时候只只都鸟模鸟样，梭形的轻巧的身体，长长的羽毛，到了冬天就发生大变化了
+              个个圆得跟个球一样，还有许多绒毛，这模样简直是上升了一个档次。<br />
+
+              济南的春天也是美景趣事多多，没去过的小伙伴不妨一试。走过了千上万水，不妨来领略这勃勃的生机。
             </p>
+            <div class="backgroundImage">
+              <img src="../../assets/sun.png" class="backgroundImage" style="width: 100px;height: 100px">
+              <div class="backgroundImage-bottom">
+                <img src="../../assets/Dandelion.png" style="width: 200px;">
+                <img src="../../assets/InkGrass.png" style="width: 200px;">
+              </div>
+            </div>
           </div>
         </li>
         <li>
@@ -107,7 +120,7 @@ export default {};
           width: 59%;
           img {
             width: 100%;
-            height: 595px;
+            height: 620px;
             margin-bottom: 3px;
           }
           .buttom-box {
@@ -251,11 +264,13 @@ export default {};
           }
         }
         .describe-box {
+          position: relative;
           float: right;
           width: 40%;
           height: 620px;
-          border: 1px solid darkcyan;
+          // border: 1px solid darkcyan;
           background-color: #fff;
+          // background: url('../../assets/way.png') no-repeat;
           span {
             font-size: 24px;
             font-weight: 600;
@@ -270,6 +285,24 @@ export default {};
             font-size: 18px;
             line-height: 24px;
             color: #333;
+          }
+          .backgroundImage {
+            position: absolute;
+            top: 70px;
+            width: 40%;
+            height: 550px;
+            opacity: .6;
+            &-bottom {
+              display: flex;
+              position: absolute;
+              bottom: 0;
+              img:nth-of-type(1) {
+                margin-left: 80px;
+              }
+              img:nth-of-type(2) {
+                margin-left: 100px;
+              }
+            }
           }
         }
       }
