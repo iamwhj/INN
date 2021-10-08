@@ -78,10 +78,10 @@ import { useRoute } from 'vue-router'
 
 const imgList = ref([
   {
-    img_path: "thumb (3).jpg",
+    img_path: "thumb3.jpg",
   },
   {
-    img_path: "thumb (6).jpg",
+    img_path: "thumb6.jpg",
   },
 ]);
 const imgList1 = ref([
@@ -89,7 +89,7 @@ const imgList1 = ref([
     img_path: "-62a33989d2c6391c.jpg",
   },
   {
-    img_path: "thumb (10).jpg",
+    img_path: "thumb10.jpg",
   },
 ]);
 const route = useRoute()

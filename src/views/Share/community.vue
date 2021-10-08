@@ -9,7 +9,7 @@
     <dl>
       <dd>
         <div class="img-box">
-          <img src="@/assets/img/thumb (8).jpg" alt="" />
+          <img src="@/assets/img/thumb8.jpg" alt="" />
         </div>
         <div class="img-info">
           <div class="img-story">

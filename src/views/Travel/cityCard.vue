@@ -45,55 +45,55 @@ const cardList = [
   {
     name: '差点火候的风火轮',
     positiveSrc: 'city-6599328_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '223'
   }, 
   {
     name: '皎洁斑驳的欧式房',
     positiveSrc: 'bremen-6557996_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '266'
   },
   {
     name: '是但不完全是的路牌',
     positiveSrc: 'signpost-6609445_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '168'
   },
     {
     name: '你打哈的样子真像只喵',
     positiveSrc: 'cat-6492741_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '307'
   },
   {
     name: '这是只鹰...鹰头吧',
     positiveSrc: 'bald-eagle-6481346_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '156'
   },
   {
     name: '不知道什么鸟的羽毛',
     positiveSrc: 'parrot-feathers-6686170_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '257'
   },
   {
     name: '发光了就是宝莲灯',
     positiveSrc: 'lotus-6474572_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '182'
   },
   {
     name: '红枫树下你和我',
     positiveSrc: 'road-5710320_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '132'
   },
   {
     name: 'PUBG草垛大差不离',
     positiveSrc: 'farming-6682584_1280.jpg',
-    negativeSrc: 'thumb (4).jpg',
+    negativeSrc: 'thumb4.jpg',
     like: '198'
   },
 ]

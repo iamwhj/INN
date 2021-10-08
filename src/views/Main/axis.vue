@@ -33,7 +33,7 @@
               <image
                 width="1.5"
                 height="1"
-                xlink:href="../../assets/img/thumb (11s).jpg"
+                xlink:href="../../assets/img/thumb11.jpg"
               />
             </pattern>
             <polygon
@@ -57,7 +57,7 @@
               <image
                 width="1.5"
                 height="1.1"
-                xlink:href="../../assets/img/thumb (12).jpg"
+                xlink:href="../../assets/img/thumb12.jpg"
               />
             </pattern>
             <polygon
@@ -132,12 +132,12 @@
         transform: translateX(-199px) skewX(-26.5deg);
       }
       #left1 {
-        background: url("../../assets/img/thumb (1s).jpg");
+        background: url("../../assets/img/thumb1s.jpg");
         background-position: center center;
         // animation: leftAction 2.5s ease;
       }
       #left2 {
-        background: url("../../assets/img/thumb (4s).jpg");
+        background: url("../../assets/img/thumb4s.jpg");
         background-position: center center;
         // animation: leftAction 2.5s ease;
       }
