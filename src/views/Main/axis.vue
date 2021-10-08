@@ -71,9 +71,7 @@
     <div class="flutter">
       <div class="flutter-box">
         <span>世界辣么大，我也想去看看</span>
-        <router-link to="/Travel/cityCard" class="pan-btn tiffany-btn"
-          >GO AGAIN</router-link
-        >
+        <router-link to="/Travel/cityCard" class="pan-btn tiffany-btn">GO AGAIN!</router-link>
       </div>
     </div>
   </div>

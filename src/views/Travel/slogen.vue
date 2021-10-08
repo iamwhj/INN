@@ -33,7 +33,7 @@ const imgList = ref([
     img_path: "slider5.jpg",
   },
   {
-    img_path: "slider1.jpg",
+    img_path: "slider6.jpeg",
   },
 ]);
 </script>

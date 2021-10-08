@@ -2,63 +2,27 @@
   <div class="city-card">
     <div class="card-box">
       <dl>
-        <dd>
+        <dd v-for="(card, index) in cardList" :key="index">
           <el-card shadow="hover">
-            <div class="rotating" @click="picturesRotatingFlag = !picturesRotatingFlag">
-              <img src="@/assets/img/thumb (5).jpg" :class="{'rotating-active' : picturesRotatingFlag}" />
+            <div
+              class="rotating"
+              @click="picturesRotatingFlag = !picturesRotatingFlag"
+            >
+              <img
+                :src="'/src/assets/card/' + card.positiveSrc"
+                :class="{ 'rotating-active': picturesRotatingFlag }"
+              />
               <!-- （旋转切图）一张图片正，一张图片反 -->
-              <img src="@/assets/img/thumb (4).jpg" :class="{'rotating-active' : !picturesRotatingFlag}" />
+              <img
+                :src="'/src/assets/card/' + card.negativeSrc"
+                :class="{ 'rotating-active': !picturesRotatingFlag }"
+              />
             </div>
             <div class="content">
-              <span class="title">开往斯里兰卡的列车</span>
+              <span class="title">{{ card.name }}</span>
               <div class="hot">
                 <img src="@/assets/icon/like1.png" alt />
-                <span>223</span>
-              </div>
-            </div>
-          </el-card>
-        </dd>
-        <dd>
-          <el-card shadow="hover">
-            <div class="rotating" @click="picturesRotatingFlag = !picturesRotatingFlag">
-              <img src="@/assets/img/thumb (5).jpg" :class="{'rotating-active' : picturesRotatingFlag}" />
-              <img src="@/assets/img/thumb (4).jpg" :class="{'rotating-active' : !picturesRotatingFlag}" />
-            </div>
-            <div class="content">
-              <span class="title">开往斯里兰卡的列车</span>
-              <div class="hot">
-                <img src="@/assets/icon/like1.png" alt />
-                <span>223</span>
-              </div>
-            </div>
-          </el-card>
-        </dd>
-        <dd>
-          <el-card shadow="hover">
-            <div class="rotating" @click="picturesRotatingFlag = !picturesRotatingFlag">
-              <img src="@/assets/img/thumb (5).jpg" :class="{'rotating-active' : picturesRotatingFlag}" />
-              <img src="@/assets/img/thumb (4).jpg" :class="{'rotating-active' : !picturesRotatingFlag}" />
-            </div>
-            <div class="content">
-              <span class="title">开往斯里兰卡的列车</span>
-              <div class="hot">
-                <img src="@/assets/icon/like1.png" alt />
-                <span>223</span>
-              </div>
-            </div>
-          </el-card>
-        </dd>
-        <dd>
-          <el-card shadow="hover">
-            <div class="rotating" @click="picturesRotatingFlag = !picturesRotatingFlag">
-              <img src="@/assets/img/thumb (5).jpg" :class="{'rotating-active' : picturesRotatingFlag}" />
-              <img src="@/assets/img/thumb (4).jpg" :class="{'rotating-active' : !picturesRotatingFlag}" />
-            </div>
-            <div class="content">
-              <span class="title">开往斯里兰卡的列车</span>
-              <div class="hot">
-                <img src="@/assets/icon/like1.png" alt />
-                <span>223</span>
+                <span>{{ card.like }}</span>
               </div>
             </div>
           </el-card>
@@ -69,10 +33,70 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const picturesRotatingFlag = ref(false)
+import { ref } from "vue";
+const picturesRotatingFlag = ref(true);
 
-const picturesRotating = () => picturesRotatingFlag.value = !picturesRotatingFlag.value
+const picturesRotating = () =>
+  (picturesRotatingFlag.value = !picturesRotatingFlag.value);
+
+const loading = ref(false);
+
+const cardList = [
+  {
+    name: '差点火候的风火轮',
+    positiveSrc: 'city-6599328_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '223'
+  }, 
+  {
+    name: '皎洁斑驳的欧式房',
+    positiveSrc: 'bremen-6557996_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '266'
+  },
+  {
+    name: '是但不完全是的路牌',
+    positiveSrc: 'signpost-6609445_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '168'
+  },
+    {
+    name: '你打哈的样子真像只喵',
+    positiveSrc: 'cat-6492741_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '307'
+  },
+  {
+    name: '这是只鹰...鹰头吧',
+    positiveSrc: 'bald-eagle-6481346_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '156'
+  },
+  {
+    name: '不知道什么鸟的羽毛',
+    positiveSrc: 'parrot-feathers-6686170_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '257'
+  },
+  {
+    name: '发光了就是宝莲灯',
+    positiveSrc: 'lotus-6474572_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '182'
+  },
+  {
+    name: '红枫树下你和我',
+    positiveSrc: 'road-5710320_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '132'
+  },
+  {
+    name: 'PUBG草垛大差不离',
+    positiveSrc: 'farming-6682584_1280.jpg',
+    negativeSrc: 'thumb (4).jpg',
+    like: '198'
+  },
+]
 </script>
 
 <style lang="scss">
@@ -98,7 +122,7 @@ const picturesRotating = () => picturesRotatingFlag.value = !picturesRotatingFla
               opacity: 0;
               width: 100%;
               height: 100%;
-              transition: all .6s ease;
+              transition: all 0.6s ease;
             }
             img:nth-of-type(1) {
               position: absolute;
@@ -110,8 +134,8 @@ const picturesRotating = () => picturesRotatingFlag.value = !picturesRotatingFla
               transform: rotateY(180deg);
             }
           }
-         .content {
-           margin-top: 12px;
+          .content {
+            margin-top: 12px;
             .title {
               display: inline-block;
               font-weight: 600;
@@ -127,10 +151,10 @@ const picturesRotating = () => picturesRotatingFlag.value = !picturesRotatingFla
               img {
                 width: 26px;
                 height: 26px;
-                transition: all .6s ease;
+                transition: all 0.6s ease;
               }
               span {
-                transition: all .6s ease;
+                transition: all 0.6s ease;
                 margin-left: 5px;
                 font-size: 18px;
                 color: #aaa;

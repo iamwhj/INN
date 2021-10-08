@@ -13,16 +13,7 @@
           <h4>热门城市：</h4>
         </el-badge>
         <dl @click="chooseCity">
-          <dd>北京</dd>
-          <dd>上海</dd>
-          <dd>杭州</dd>
-          <dd>西安</dd>
-          <dd>深圳</dd>
-          <dd>苏州</dd>
-          <dd>南京</dd>
-          <dd>六盘水</dd>
-          <dd>攀枝花</dd>
-          <!-- <dd v-for="(item, index) in cityHotList" :key="index" @click="chooseCity">{{item.name}}</dd> -->
+          <dd v-for="(item, index) in cityHotList" :key="index" @click="chooseCity">{{item.name}}</dd>
         </dl>
       </div>
     </div>
@@ -39,6 +30,11 @@ const cityHotList = ref([
   { name: "上海" },
   { name: "杭州" },
   { name: "西安" },
+  { name: "深圳" },
+  { name: "苏州" },
+  { name: "南京" },
+  { name: "六盘水" },
+  { name: "攀枝花" },
 ]);
 
 const router = useRouter()
