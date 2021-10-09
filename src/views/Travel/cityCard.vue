@@ -9,12 +9,12 @@
               @click="picturesRotatingFlag = !picturesRotatingFlag"
             >
               <img
-                :src="'/src/assets/card/' + card.positiveSrc"
+                :src="getImgUrl(card.positiveSrc)"
                 :class="{ 'rotating-active': picturesRotatingFlag }"
               />
               <!-- （旋转切图）一张图片正，一张图片反 -->
               <img
-                :src="'/src/assets/card/' + card.negativeSrc"
+                :src="getImgUrl(card.negativeSrc)"
                 :class="{ 'rotating-active': !picturesRotatingFlag }"
               />
             </div>
@@ -97,6 +97,9 @@ const cardList = [
     like: '198'
   },
 ]
+
+const getImgUrl = (imgPath) => new URL('../../assets/card/'+ imgPath, import.meta.url).href
+
 </script>
 
 <style lang="scss">

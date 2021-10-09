@@ -10,7 +10,7 @@
       <ul>
         <li v-for="(view, index) in recomList" :key="index">
           <div class="img-box">
-            <img :src="'/src/assets/recommend/spring/' + view.imgSrc" />
+            <img :src="getImgUrl(view.imgSrc)" />
             <div class="buttom-box">
               <span>
                 <i class="el-icon-time"></i>
@@ -98,6 +98,7 @@ const recomList = [
   }
 ]
 
+const getImgUrl = (imgPath) => new URL('../../assets/recommend/spring/'+ imgPath, import.meta.url).href
 </script>
 
 <style lang="scss">

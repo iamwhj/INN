@@ -4,7 +4,7 @@
       <el-carousel :interval="6000" type="card" height="400px">
         <el-carousel-item v-for="(item, index) in imgList" :key="index">
           <el-image
-            :src="'/src/assets/slider-img/' + item.img_path"
+            :src="getImgUrl(item.img_path)"
             fit="fill"
           ></el-image>
         </el-carousel-item>
@@ -14,9 +14,10 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 
-const imgList = ref([
+const getImgUrl = (imgPath) => new URL('../../assets/slider-img/'+ imgPath, import.meta.url).href
+
+const imgList = [
   {
     img_path: "slider1.jpg",
   },
@@ -35,7 +36,7 @@ const imgList = ref([
   {
     img_path: "slider6.jpeg",
   },
-]);
+];
 </script>
 
 <style lang="scss">
