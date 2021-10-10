@@ -4,6 +4,10 @@ import Main from '../views/Main/index.vue'
 
 const routes = [
   {
+    path: '/login',
+    component: () => import('../views/Login/index.vue')
+  },
+  {
     path: '/',
     component: Layout,
     redirect: '/Main',

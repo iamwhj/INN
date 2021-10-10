@@ -33,7 +33,7 @@
               <image
                 width="1.5"
                 height="1"
-                xlink:href="../../assets/img/thumb11.jpg"
+                :xlink:href="imgList.rightAvt1.default"
               />
             </pattern>
             <polygon
@@ -57,7 +57,7 @@
               <image
                 width="1.5"
                 height="1.1"
-                xlink:href="../../assets/img/thumb12.jpg"
+                :xlink:href="imgList.rightAvt2.default"
               />
             </pattern>
             <polygon
@@ -78,6 +78,12 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+const store = useStore()
+const avatarList = store.state.mainAvatarList
+const imgList = ref(avatarList)
 </script>
 
 <style lang="scss">
