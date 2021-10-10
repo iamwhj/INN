@@ -26,7 +26,7 @@ export default defineConfig({
           return `element-plus/lib/${name}`;
         },
       }]
-    })
+    }),
   ],
 
   // alias

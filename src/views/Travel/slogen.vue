@@ -4,7 +4,7 @@
       <el-carousel :interval="6000" type="card" height="400px">
         <el-carousel-item v-for="(item, index) in imgList" :key="index">
           <el-image
-            :src="getImgUrl(item.img_path)"
+            :src="getImgUrl('../../assets/slider-img/' + item.img_path)"
             fit="fill"
           ></el-image>
         </el-carousel-item>
@@ -15,7 +15,8 @@
 
 <script setup>
 
-const getImgUrl = (imgPath) => new URL('../../assets/slider-img/'+ imgPath, import.meta.url).href
+const imgModule = import.meta.globEager('../../assets/slider-img/*')
+const getImgUrl = (imgPath) => imgModule[imgPath].default
 
 const imgList = [
   {

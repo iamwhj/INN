@@ -10,7 +10,7 @@
       <ul>
         <li v-for="(view, index) in recomList" :key="index">
           <div class="img-box">
-            <img :src="getImgUrl(view.imgSrc)" />
+            <img :src="getImgUrl('../../assets/recommend/spring/' + view.imgSrc)" />
             <div class="buttom-box">
               <span>
                 <i class="el-icon-time"></i>
@@ -97,8 +97,10 @@ const recomList = [
     phrase: '沿山一棹婺溪行，山色苍苍溪水清。拟到黄州说风景，小茅篷底浪花声'
   }
 ]
+// const getImgUrl = (imgPath) => new URL('../../assets/recommend/spring/'+ imgPath, import.meta.url)
 
-const getImgUrl = (imgPath) => new URL('../../assets/recommend/spring/'+ imgPath, import.meta.url).href
+const imgModule = import.meta.globEager('../../assets/recommend/spring/*')
+const getImgUrl = (imgPath) => imgModule[imgPath].default
 </script>
 
 <style lang="scss">

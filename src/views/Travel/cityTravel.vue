@@ -22,7 +22,7 @@
             >
               <el-carousel-item v-for="(item, index) in imgList" :key="index">
                 <el-image
-                  :src="getImgUrl(item.img_path)"
+                  :src="getImgUrl('../../assets/img/' + item.img_path)"
                   fit="fill"
                 ></el-image>
               </el-carousel-item>
@@ -50,7 +50,7 @@
             >
               <el-carousel-item v-for="(item, index) in imgList1" :key="index">
                 <el-image
-                  :src="getImgUrl(item.img_path)"
+                  :src="getImgUrl('../../assets/img/' + item.img_path)"
                   fit="fill"
                 ></el-image>
               </el-carousel-item>
@@ -138,8 +138,8 @@ const describe = computed(() => {
   return curCity.length ? curCity[0].describe : ''
 })
 
-const getImgUrl = (imgPath) => new URL('../../assets/img/'+ imgPath, import.meta.url).href
-
+const imgModule = import.meta.globEager('../../assets/img/*')
+const getImgUrl = (imgPath) => imgModule[imgPath].default
 </script>
 
 <style lang="scss" scoped>
