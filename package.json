@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "element-plus": "^1.1.0-beta.18",
+    "js-cookie": "^3.0.1",
     "vue": "^3.2.19",
     "vue-router": "4",
     "vuex": "^4.0.2"

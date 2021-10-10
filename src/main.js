@@ -5,6 +5,7 @@ import store from './store'
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import './style/index.scss';
+import './permission.js'
 
 createApp(App)
 .use(router)

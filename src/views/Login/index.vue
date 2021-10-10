@@ -39,7 +39,6 @@
         <span style="margin-right:20px;">username: more then five</span>
         <span> password: more then six</span>
       </div>
-
     </el-form>
   </div>
 </template>
@@ -47,7 +46,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
+import Cookies from 'js-cookie'
+
   const validateUsername = (rule, value, callback) => {
     if (value.length < 5) {
       callback(new Error('Please enter the correct user name'))
@@ -81,9 +81,10 @@ import { useStore } from 'vuex'
       if (valid) {
         loading.value = true
         setTimeout(() => {
+          Cookies.set('token', 'login success')
           router.push('/')
           loading.value = false
-        }, 1000)
+        }, 1500)
       } else {
         console.log('error submit!!')
         return false
@@ -91,20 +92,20 @@ import { useStore } from 'vuex'
     })
   }
 
-  const store = useStore()
   onMounted(() => {
-    const promiseArr = []
-    const list = {}
     const avatarList = {
-      'rightAvt1' : () => import('../../assets/img/thumb11.jpg'),
-      'rightAvt2' : () => import('../../assets/img/thumb12.jpg')
+      'rightAvt1' : import('../../assets/img/thumb11.jpg'),
+      'rightAvt2' : import('../../assets/img/thumb12.jpg'),
+      'leftAvt1' : import('../../assets/img/thumb1s.jpg'),
+      'leftAvt2' : import('../../assets/img/thumb4s.jpg')
     }
     for (const key in avatarList) {
-      promiseArr.push(avatarList[key]().then(res => list[key] = res))
+      console.log(avatarList[key]);
+      let img = new Image()
+      avatarList[key].then(res => {
+        img.src = res.default
+      })
     }
-    Promise.all(promiseArr).then(res => {
-      store.commit('changeMainAvatarList', list)
-    })
   })
 </script>
 

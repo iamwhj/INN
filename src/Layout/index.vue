@@ -1,7 +1,14 @@
 <template>
     <div class="layout">
         <navBar></navBar>
-        <router-view></router-view>
+        <router-view v-slot="{ Component, route }">
+          <keep-alive>
+            <component
+              :is="Component"
+              :key="route.meta.usePathKey ? route.path : undefined"
+            />
+          </keep-alive>
+        </router-view>
         <Footer></Footer>
     </div>
 </template>
